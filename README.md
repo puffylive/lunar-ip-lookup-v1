@@ -1,177 +1,281 @@
-# 🌙 Lunar v1 — IP Lookup Tool
+# 🌙 Lunar v1 - IP Lookup Tool
+
 <div align="center">
 
+![Lunar Logo](https://via.placeholder.com/800x200/5A189A/FFFFFF?text=LUNAR+v1+IP+LOOKUP)  
+*[Replace with your actual logo image]*
 
-Replace this with your actual logo once uploaded
+**A powerful, purple-themed IP geolocation lookup tool with a sleek terminal interface**
 
-A purple-themed IP lookup tool with a clean and simple terminal interface.
-
-
-
-
-
-
-
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
+[![License](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
+[![Windows](https://img.shields.io/badge/Windows-11%2C%2010-purple.svg)](https://windows.com)
+[![Version](https://img.shields.io/badge/Version-1.0.0-9D4EDD.svg)]()
 
 </div>
-✨ Features
 
-🌐 Look up any IP address
+## ✨ Features
 
-🟣 Clean purple-themed UI
+- 🌐 **IP Geolocation** - Detailed location information for any IP address
+- 🎨 **Beautiful Purple UI** - Custom terminal interface with purple theme
+- 💾 **Export Results** - Save lookup data as JSON files
+- 🚀 **Fast & Lightweight** - Quick API queries with minimal resource usage
+- 🔧 **Multiple Modes** - Lookup target IPs or your own public IP
+- 🗺️ **Map Integration** - Direct Google Maps links for coordinates
+- 📦 **Executable Support** - Run as standalone .exe file
+- 🛡️ **Error Handling** - Robust error handling and input validation
 
-💾 Save lookups as JSON files
+## 📸 Screenshots
 
-⚡ Fast API requests
+### Main Interface
+![Main Menu](https://via.placeholder.com/800x450/5A189A/FFFFFF?text=Main+Menu+Interface)  
+*[Add screenshot of your main menu here]*
 
-🔍 Check your own public IP
+### IP Lookup Results
+![Results Screen](https://via.placeholder.com/800x450/7B2CBF/FFFFFF?text=IP+Lookup+Results)  
+*[Add screenshot of IP lookup results here]*
 
-🗺️ Google Maps coordinate links
+### Command Line Mode
+![CLI Mode](https://via.placeholder.com/800x250/240046/FFFFFF?text=Command+Line+Interface)  
+*[Add screenshot of CLI mode here]*
 
-🛡️ Great error handling
+## 🚀 Quick Start
 
-📦 Works as .exe if you want
+### Prerequisites
+- Python 3.8 or higher
+- Windows 10/11 (or Linux/Mac with terminal)
+- Internet connection
 
-📸 Screenshots
-🟪 Main Interface
+### Installation
 
-🟪 IP Lookup Results
+1. **Clone or Download the Repository**
+``bash
+git clone https://github.com/puffylive/lunar-ip-lookup.git
+cd lunar-ip-lookup
+Install Required Dependencies
 
-🟪 Command Line Mode
-
-🚀 Quick Start
-1. Install Python Requirements
+bash
 pip install -r requirements.txt
-
-
 Or install manually:
 
+bash
 pip install requests colorama
+Run the Tool
 
-2. Run the Tool
+bash
 python lunar_ip_lookup.py
+📖 In-Depth Tutorial
+🎮 Part 1: Basic Usage
+Step 1: Launch the Application
+After installation, simply run the script:
 
-📖 How to Use
-⭐ Step 1 — Start the Program
+bash
 python lunar_ip_lookup.py
+You'll be greeted with the main menu:
 
+https://via.placeholder.com/600x300/3C096C/FFFFFF?text=LUNAR+v1+Main+Menu
+The purple-themed main interface appears
 
-You’ll see the purple main menu:
+Step 2: Choose Lookup Type
+Use the menu options:
 
-⭐ Step 2 — Choose an Option
+Option 1: Lookup a specific IP address
 
-1 → Look up an IP
+Option 2: Lookup your own public IP
 
-2 → View your public IP
+Option 3-4: Future features (coming in v2)
 
-3 → View saved logs (coming soon)
+Option 5: Exit the program
 
-4 → Settings (coming soon)
+https://via.placeholder.com/600x200/240046/FFFFFF?text=Menu+Options+1-5
+Select from the available options
 
-5 → Exit
+Step 3: Enter IP Address
+If you choose Option 1, enter any valid IP address:
 
-⭐ Step 3 — Enter an IP
-
-Example:
-
+text
 Enter target IP address: 8.8.8.8
+https://via.placeholder.com/600x100/5A189A/FFFFFF?text=Enter+IP+Address+8.8.8.8
+Enter the target IP address
 
+Step 4: View Results
+The tool queries the IP-API service and displays:
 
-⭐ Step 4 — View Results
+https://via.placeholder.com/700x400/7B2CBF/FFFFFF?text=Detailed+IP+Information
+Comprehensive IP information displayed
 
-You get:
+Step 5: Save Results (Optional)
+When prompted, save results to a JSON file:
 
-City
+text
+💾 Save results to file? [Y/n]: Y
+✅ Results saved to: lunar_ip_lookup_20241215_143022.json
+🔧 Part 2: Advanced Features
+Command Line Mode
+Run lookups directly from command line:
 
-State
-
-Country
-
-Timezone
-
-ISP / Org
-
-Coordinates
-
-Google Maps link
-
-⭐ Step 5 — Save If You Want
-💾 Save results to file? [Y/n]:
-
-
-Creates:
-
-lunar_ip_lookup_20251201_143022.json
-
-💻 Advanced Usage
-🎯 Direct CLI Lookup
+bash
+# Lookup specific IP
 python lunar_ip_lookup.py --ip 1.1.1.1
 
-🎯 Build an Executable (.exe)
+# OR
+python lunar_ip_lookup.py -i 192.168.1.1
+https://via.placeholder.com/600x250/3C096C/FFFFFF?text=Command+Line+Mode+Example
+Direct command line lookup
 
-Install:
+Exporting Data
+All saved JSON files include complete API response:
 
+json
+{
+  "status": "success",
+  "country": "United States",
+  "countryCode": "US",
+  "region": "CA",
+  "regionName": "California",
+  "city": "Mountain View",
+  "zip": "94043",
+  "lat": 37.4192,
+  "lon": -122.0574,
+  "timezone": "America/Los_Angeles",
+  "isp": "Google LLC",
+  "org": "Google LLC",
+  "as": "AS15169 Google LLC",
+  "query": "8.8.8.8"
+}
+Map Integration
+Click the generated Google Maps link to see the location:
+
+text
+📍 Map Link: https://www.google.com/maps?q=37.4192,-122.0574
+https://via.placeholder.com/600x300/4285F4/FFFFFF?text=Google+Maps+Integration
+View location on Google Maps
+
+💻 Part 3: Creating an Executable
+Generate .exe File
+Use the built-in instructions:
+
+bash
+python lunar_ip_lookup.py --exe
+Or use PyInstaller directly:
+
+bash
+# Install PyInstaller
 pip install pyinstaller
 
+# Create executable
+pyinstaller --onefile --console --name "Lunar_IP_Lookup" lunar_ip_lookup.py
 
-Build:
+# With custom icon (optional)
+pyinstaller --onefile --console --name "Lunar_IP_Lookup" --icon=lunar.ico lunar_ip_lookup.py
+Executable Locations
+Windows: dist/Lunar_IP_Lookup.exe
 
-pyinstaller --onefile --console lunar_ip_lookup.py
+Output: Standalone executable (no Python required)
 
+https://via.placeholder.com/400x200/5A189A/FFFFFF?text=Lunar_IP_Lookup.exe
+Standalone executable file
 
-Add an icon:
+🛠️ Technical Details
+API Integration
+Lunar v1 uses the free ip-api.com service with these rate limits:
 
-pyinstaller --onefile --console --icon=lunar.ico lunar_ip_lookup.py
+45 requests per minute from an IP address
 
-🗂 Project Structure
+No API key required
+
+Commercial use available
+
+Color System
+The purple theme uses ANSI escape codes:
+
+\033[95m - Bright Purple
+
+\033[35m - Dark Purple
+
+\033[38;5;141m - Light Purple
+
+\033[38;5;165m - Bright Purple
+
+\033[38;5;129m - Neon Purple
+
+File Structure
+text
 lunar_ip_lookup/
-│── lunar_ip_lookup.py
-│── requirements.txt
-│── README.md
-│── lunar.ico (optional)
-└── examples/
+├── lunar_ip_lookup.py      # Main application
+├── requirements.txt        # Python dependencies
+├── README.md              # This file
+├── lunar.ico              # Icon for executable (optional)
+└── examples/              # Example output files
     ├── lookup_google.json
     └── lookup_cloudflare.json
+📋 Usage Examples
+Example 1: Basic Lookup
+bash
+> python lunar_ip_lookup.py
+[Choose Option 1]
+Enter target IP address: 8.8.8.8
+[Shows Google's DNS server location]
+Example 2: Public IP Check
+bash
+> python lunar_ip_lookup.py
+[Choose Option 2]
+[Automatically detects and displays your public IP]
+Example 3: Batch Processing (Manual)
+Create a batch file lookup.bat:
 
-🔧 Technical Info
+batch
+@echo off
+python lunar_ip_lookup.py --ip 1.1.1.1
+pause
+python lunar_ip_lookup.py --ip 8.8.8.8
+pause
+🐛 Troubleshooting
+Issue	Solution
+"Cannot connect to IP API service"	Check internet connection, firewall settings
+"Invalid IP address format"	Ensure IP follows xxx.xxx.xxx.xxx format
+Colors not displaying	Ensure terminal supports ANSI colors
+Executable won't run	Install Visual C++ Redistributable
+Permission denied when saving	Run as administrator or choose different save location
+🔮 Future Updates (v2 Planned)
+Batch IP Processing - Upload CSV files with multiple IPs
 
-Uses ip-api.com
+Network Scanner Integration - Scan local network IPs
 
-Does not require an API key
+Whois Lookup - Additional domain registration info
 
-45 requests/min limit
+Report Generation - PDF/HTML report generation
 
-Purple theme uses ANSI escape codes
+API Key Support - For higher rate limits
 
-JSON output is standardized
+Dark/Light Mode - Toggle between themes
 
-🔮 Planned for v2
+Proxy Support - Use proxies for lookups
 
-Batch IP uploads
-
-Local network scanner
-
-WHOIS lookup
-
-PDF/HTML report generation
-
-Proxy support
-
-Multiple color themes
-
-Saved lookup history
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 👤 Author
-
 PuffyLive
-GitHub: https://github.com/puffylive
+
+GitHub: @puffylive
+
+Tool: Lunar v1 IP Lookup
+
+Version: 1.0.0
+
+🙏 Acknowledgments
+ip-api.com for the free geolocation API
+
+Python community for excellent libraries
+
+Contributors and testers
 
 ⭐ Support
+If you find this tool useful, please:
 
-If you like this project:
+⭐ Star the repository
 
-⭐ Star the repo
+🐛 Report issues
 
-🐛 Report bugs
-
-🔄 Suggest features
+🔄 Share with others
