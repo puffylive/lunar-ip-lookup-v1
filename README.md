@@ -42,7 +42,7 @@
 
 1. **Download the Script**
 ```bash
-git clone https://github.com/yourusername/lunar-ip-lookup.git
+git clone https://github.com/puffylive/lunar-ip-lookup.git
 cd lunar-ip-lookup
 ```
 
